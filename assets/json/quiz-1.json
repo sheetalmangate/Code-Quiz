@@ -1,0 +1,25 @@
+{
+  "quizName": "CSS Quiz",
+  "active": true,
+  "questions": [
+    {
+      "question": "What does CSS stand for?",
+      "options": [
+        "Computer Style Sheet",
+        "Cascading Style Sheet",
+        "Colorful Style Sheet",
+        "Creative Style Sheet"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What is the correct HTML for referring to an external style sheet?",
+      "options": [
+        "<style src=\"mystyle.css\">",
+        "<stylesheet>mystyle.css</stylesheet>",
+        "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"
+      ],
+      "answer": 2 
+    }
+  ]
+}
