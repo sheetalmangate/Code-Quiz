@@ -85,6 +85,8 @@ function renderQuizContent(section, quiz) {
 
 function checkAnswers(quiz) {
   const forms = document.querySelectorAll('.quiz-form');
+  let correctAnswers = 0; // Variable to keep track of correct answers
+
   forms.forEach((form, questionIndex) => {
     const selectedOption = form.querySelector('input[type="radio"]:checked');
     let resultElement = form.querySelector('.result'); // Check if the result element already exists
@@ -99,6 +101,7 @@ function checkAnswers(quiz) {
       if (selectedAnswerIndex === quiz.questions[questionIndex].answer) {
         resultElement.textContent = 'Correct!';
         resultElement.className = 'text-success result';
+        correctAnswers++;
       } else {
         resultElement.textContent = 'Incorrect!';
         resultElement.className = 'text-danger result';
@@ -108,7 +111,13 @@ function checkAnswers(quiz) {
       resultElement.className = 'text-warning result';
     }
   });
+
+  // Show the modal with the results
+  const myModal = new bootstrap.Modal(document.getElementById('myModal'));
+  document.getElementById('modalBodyText').textContent = `You got ${correctAnswers} out of ${quiz.questions.length} correct!`;
+  myModal.show();
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const dropdownItems = document.querySelectorAll('.dropdown-item');
@@ -124,5 +133,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-
