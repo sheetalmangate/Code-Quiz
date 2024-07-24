@@ -1,17 +1,3 @@
-async function fetchQuizData(quizId) {
-  const requestURL = `./assets/json/${quizId}.json`;
-  console.log(`Fetching data from: ${requestURL}`);  // Debug log
-  try {
-    const response = await fetch(requestURL);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const quiz = await response.json();
-    return quiz;
-  } catch (error) {
-    console.error(`Failed to fetch quiz data: ${error}`);
-  }
-}
 
 function renderQuiz(quiz) {
   const header = document.querySelector("header");

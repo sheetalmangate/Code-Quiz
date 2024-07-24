@@ -1,12 +1,12 @@
 /*
-   This file contains comman logic.
+   This file contains common logic.
 */
 
+//fetch JSON data 
 async function fetchQuizData(quizId) {
     
     const requestURL = `./assets/json/quiz-${quizId}.json`;
-    //const requestURL = `https://sheetalmangate.github.io/prework-study-guide/assets/json/quiz-${quizId}.json`;
-    console.log(`Fetching data from: ${requestURL}`);  // Debug log
+  
     try {
       const response = await fetch(requestURL);
       if (!response.ok) {
@@ -19,16 +19,16 @@ async function fetchQuizData(quizId) {
     }
   }
 
-//This function is use to render quiz when clicked from drop down
+//This function is use to render quiz when accessed from drop down menu
 const quizList = document.querySelectorAll("#quiz-list > li > span");
+const url = window.location.origin+"/quiz.html";
 
 quizList.forEach((item) => { 
     
     let quizId = item.dataset.id;
-
     item.addEventListener("click", function(event) {
          localStorage.setItem("quizeId",quizId);
-         location.reload();
+         location.assign(url);
     } );
 });
 
