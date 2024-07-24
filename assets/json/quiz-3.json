@@ -1,5 +1,5 @@
 {
-"quizname": "Java Quiz",
+    "quizname": "Java Quiz",
     "active": true,
     "questions":[
         {
@@ -38,14 +38,12 @@
             "question": "What method is used to add an element to the end of an array in JavaScript?",
             "answer":2,
             "options":[
-                
+                "pop",
+                "push",
+                "merge",
+                "length"
             ]
         }
-
-
-
-
-
 
     ]
 }
