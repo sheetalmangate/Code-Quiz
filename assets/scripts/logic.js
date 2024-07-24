@@ -12,7 +12,7 @@ async function fetchQuizData(quizId) {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      const quiz = await response.json();      
+      const quiz = await response.json();  
       return quiz;
     } catch (error) {
       console.error(`Failed to fetch quiz data: ${error}`);

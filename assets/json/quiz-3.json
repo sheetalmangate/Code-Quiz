@@ -1,5 +1,6 @@
 {
-    "quizname": "Java Quiz",
+    "quizName": "JavaScript Quiz",
+    "quizDesc": "This quiz is testing basic of Javascript.",
     "active": true,
     "questions":[
         {
@@ -10,7 +11,6 @@
                 "var x;",
                 "int x;",
                 " x = var;"
-
             ]
         },
         {
