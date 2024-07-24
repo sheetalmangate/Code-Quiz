@@ -1,5 +1,6 @@
 {
-  "quizName": "CSS Quiz",
+  "quizName": "CSS Basic",
+  "quizDesc" : "This quiz is testing your basic knowledge about the css. It will test your knowledge about color, font, display and border property of css.",
   "active": true,
   "questions": [
     {

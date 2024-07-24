@@ -1,5 +1,6 @@
 {
-    "quizName": "CSS Quiz",
+    "quizName": "HTML Basic",
+    "quizDesc": "This quiz will test your knowledge about symentic tags from HTML. What is the symentic tags and why to use it for web pages",
     "active": true,
     "questions": [
       {
