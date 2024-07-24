@@ -1,25 +1,56 @@
 {
-  "quizName": "CSS Quiz",
+  "quizName": "HTML Quiz",
   "active": true,
   "questions": [
     {
-      "question": "What does CSS stand for?",
+      "question": "What does HTML stand for?",
       "options": [
-        "Computer Style Sheet",
-        "Cascading Style Sheet",
-        "Colorful Style Sheet",
-        "Creative Style Sheet"
+        "Hyper Text Markup Language",
+        "High Tech Markup Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
       ],
-      "answer": 2
+      "answer": 0
     },
     {
-      "question": "What is the correct HTML for referring to an external style sheet?",
+      "question": "Which tag is used to define an unordered list in HTML?",
       "options": [
-        "<style src=\"mystyle.css\">",
-        "<stylesheet>mystyle.css</stylesheet>",
-        "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<list>"
       ],
-      "answer": 2 
+      "answer": 0 
+    },
+    {
+      "question": "In HTML, which attribute is used to specify a unique identifier for an element?",
+      "options":[
+        "id",
+        "class",
+        "type",
+        "name"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is the correct HTML tag for inserting an image?",
+      "options":[
+        "<img src=image.jpg>",
+        "<image href=image.jpg>",
+        "<image src=image.jpg>",
+        "<img href=image.jpg>"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "How can you creat a hyperlink in HTML?",
+      "options":[
+        "<link>",
+        "<a href=http://example.com>Example</a>",
+        "<href>",
+        "<hyperlink>"
+      ],
+      "answer": 2
     }
   ]
 }
