@@ -1,56 +1,83 @@
 {
-    "quizName": "CSS Quiz",
+"quizname": "CSS Quiz",
     "active": true,
     "questions": [
-      {
-        "question": "In CSS, which property is used to change the text color of an element?",
-        "options": [
-          "Text-color",
-          "color",
-          "font-color",
-          "text-style"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "How do you include CSS in your HTML document?",
-        "options": [
-          "<style src=styles.css>",
-          "<link rel=stylesheet href=styles.css>",
-          "<css>styles.css</css>",
-          "<script type=text/css src=styles.css>"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "Which CSS property is used to control the spacing between lines of text?",
-        "options":[
-          "text-spacing",
-          "line-spacing",
-          "line-height",
-          "text-line"
-        ],
-    "answer": 2
-      },
-      {
-        "question": "How can you make a text bold in CSS?",
-        "options":[
-          "font-style: bold;",
-          "text-decoration: bold;",
-          "font-weight: bold;",
-          "text-weight: bold;"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "Which CSS selector is used to target elements with a specific class?",
-        "options":[
-          "#class",
-          ".class",
-          "class",
-          "element [class]"
-        ],
-        "answer":1
-      }
+        {
+            "question": "In CSS, which property is used to change the text color of an element?",
+            "answer": 2,
+            "options": [
+                "text-color",
+                "color",
+                "font-color",
+                "text-style"
+            ]
+        },
+        {
+            "question": "How do you include CSS in your HTML document?",
+            "answer": 2,
+            "options":[
+                "<style src=styles.css>",
+                "<link rel=stylesheet href=styles.css>",
+                "<css>styles.css</css>",
+                "<script type=text/css src=styles.css>"
+            ]
+
+        },
+        {
+            "question": "Which CSS property is used to control the spacing between lines of text?",
+            "answer": 3,
+            "options":[
+                "text-spacing",
+                "line-spacing",
+                "line-height",
+                "text-line"
+            ]
+
+        },
+        {
+            "question": "How can you make a text bold in CSS?",
+            "answer":3,
+            "options":[
+                "font-style: bold;",
+                "text-decoration: bold;",
+                "font-weight: bold;",
+                "text-weight: bold;"
+
+            ]
+        },
+        {
+            "question": "Which CSS selector is used to target elements with a specific class?",
+            "answer":2,
+            "options":[
+                "#class",
+                ".class",
+                "class",
+                "element[class]"
+            ]
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ]
-  }
+}
