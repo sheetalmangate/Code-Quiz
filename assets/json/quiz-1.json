@@ -1,25 +1,56 @@
 {
-  "quizName": "CSS Quiz",
-  "active": true,
-  "questions": [
-    {
-      "question": "What does CSS stand for?",
-      "options": [
-        "Computer Style Sheet",
-        "Cascading Style Sheet",
-        "Colorful Style Sheet",
-        "Creative Style Sheet"
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What is the correct HTML for referring to an external style sheet?",
-      "options": [
-        "<style src=\"mystyle.css\">",
-        "<stylesheet>mystyle.css</stylesheet>",
-        "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"
-      ],
-      "answer": 2 
-    }
-  ]
+    "quizname": "HTML Quiz",
+    "active": true,
+    "questions": [
+        {
+            "question": "What does HTML stand for",
+            "answer": 1,
+            "options": [
+                "Hyper Text Markup Language",
+                "High Tech Markup Language",
+                "Home Tool Markup Language",
+                "Hyperlinks and Text Markup Language"
+            ]
+        },
+        {
+            "question": "Which tag is used to define an unordered list in HTML?",
+            "answer": 1,
+            "options": [
+                "<ul>",
+                "<ol>",
+                "<li>",
+                "<list>"
+            ]
+        },
+        {
+            "question": "In HTML, which attribute is used to specify a unique identifier for an element?",
+            "answer": 1,
+            "options": [
+                "id",
+                "class",
+                "type",
+                "name"
+            ]
+        },
+        {
+            "question": "What is the correct HTML tag for inserting an image?",
+            "answer": 3,
+            "options": [
+                "<image href=image.jpg>",
+                "<image src=image.jpg>",
+                "<img src=image.jpg>",
+                "<img href=image.jpg>"
+            ]
+        },
+        {
+            "question": "How can you create a hyperlink in HTML?",
+            "answer": 2,
+            "options": [
+                "<link>",
+                "<a href=http://example.com>Example</a>",
+                "<href>",
+                "<hyperlink>"
+            ]
+        }
+    ]
 }
