@@ -1,25 +1,51 @@
 {
-    "quizName": "CSS Quiz",
+"quizname": "Java Quiz",
     "active": true,
-    "questions": [
-      {
-        "question": "What does CSS stand for?",
-        "answer": 2,
-        "options": [
-          "Computer Style Sheet",
-          "Cascading Style Sheet",
-          "Colorful Style Sheet",
-          "Creative Style Sheet"
-        ]
-      },
-      {
-        "question": "What is the correct HTML for referring to an external style sheet?",
-        "answer": 3,
-        "options": [
-          "<style src=\"mystyle.css\">",
-          "<stylesheet>mystyle.css</stylesheet>",
-          "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">"
-        ]
-      }
+    "questions":[
+        {
+            "question": "How do you declare a variable in JavaScript?",
+            "answer": 2,
+            "options":[
+                "variable x;",
+                "var x;",
+                "int x;",
+                " x = var;"
+
+            ]
+        },
+        {
+            "question": "What is the correct way to write an IF statement in JavaScript?",
+            "answer":2,
+            "options":[
+                "if x == 5 then",
+                "if (x == 5)",
+                "if x = 5",
+                "if x = 5 then"
+            ]
+
+        },
+        {
+            "question": "How do you write a function in JavaScript?",
+            "answer": 3,
+            "options": [
+                "function = myFunction() {}",
+                "function: myFunction() {}",
+                "function myFunction() {}",
+                "myFunction() = function() {}"
+            ]
+        },
+        {
+            "question": "What method is used to add an element to the end of an array in JavaScript?",
+            "answer":2,
+            "options":[
+                
+            ]
+        }
+
+
+
+
+
+
     ]
-  }
+}
