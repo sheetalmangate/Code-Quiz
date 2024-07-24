@@ -4,7 +4,7 @@
     "questions": [
         {
             "question": "What does HTML stand for",
-            "answer": 1,
+            "answer": 0,
             "options": [
                 "Hyper Text Markup Language",
                 "High Tech Markup Language",
@@ -14,7 +14,7 @@
         },
         {
             "question": "Which tag is used to define an unordered list in HTML?",
-            "answer": 1,
+            "answer": 0,
             "options": [
                 "<ul>",
                 "<ol>",
@@ -24,7 +24,7 @@
         },
         {
             "question": "In HTML, which attribute is used to specify a unique identifier for an element?",
-            "answer": 1,
+            "answer": 0,
             "options": [
                 "id",
                 "class",
@@ -34,7 +34,7 @@
         },
         {
             "question": "What is the correct HTML tag for inserting an image?",
-            "answer": 3,
+            "answer": 2,
             "options": [
                 "<image href=image.jpg>",
                 "<image src=image.jpg>",
@@ -44,7 +44,7 @@
         },
         {
             "question": "How can you create a hyperlink in HTML?",
-            "answer": 2,
+            "answer": 1,
             "options": [
                 "<link>",
                 "<a href=http://example.com>Example</a>",
