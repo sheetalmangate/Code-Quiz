@@ -1,20 +1,28 @@
+function renderQuizStartButton(quiz) {
+  const section = document.querySelector("section");
+  section.innerHTML = '';  // Clear previous content
+
+  const startButton = document.createElement('button');
+  startButton.textContent = 'Start Quiz';
+  startButton.className = 'btn btn-primary mt-3';
+  startButton.addEventListener('click', () => {
+    renderQuiz(quiz);
+  });
+
+  section.appendChild(startButton);
+}
 
 function renderQuiz(quiz) {
-  const header = document.querySelector("header");
+  /*const header = document.querySelector("header");
   header.innerHTML = '';  // Clear previous content
   const myH1 = document.createElement("h1");
   myH1.textContent = quiz.quizName;
-  header.appendChild(myH1);
+  header.appendChild(myH1);*/
 
   const section = document.querySelector("section");
-  if (!section) {
-    const newSection = document.createElement("section");
-    document.body.appendChild(newSection);
-    renderQuizContent(newSection, quiz);
-  } else {
-    section.innerHTML = '';  // Clear previous content
-    renderQuizContent(section, quiz);
-  }
+  section.innerHTML = '';  // Clear previous content
+
+  renderQuizContent(section, quiz);
 }
 
 function renderQuizContent(section, quiz) {
@@ -64,21 +72,26 @@ function checkAnswers(quiz) {
   const forms = document.querySelectorAll('.quiz-form');
   forms.forEach((form, questionIndex) => {
     const selectedOption = form.querySelector('input[type="radio"]:checked');
-    const resultElement = document.createElement('div');
+    let resultElement = form.querySelector('.result'); // Check if the result element already exists
+    if (!resultElement) {
+      resultElement = document.createElement('div'); // Create a new result element if it doesn't exist
+      resultElement.className = 'result';
+      form.appendChild(resultElement);
+    }
+
     if (selectedOption) {
       const selectedAnswerIndex = parseInt(selectedOption.value, 10);
       if (selectedAnswerIndex === quiz.questions[questionIndex].answer) {
         resultElement.textContent = 'Correct!';
-        resultElement.className = 'text-success';
+        resultElement.className = 'text-success result';
       } else {
         resultElement.textContent = 'Incorrect!';
-        resultElement.className = 'text-danger';
+        resultElement.className = 'text-danger result';
       }
     } else {
       resultElement.textContent = 'No answer selected!';
-      resultElement.className = 'text-warning';
+      resultElement.className = 'text-warning result';
     }
-    form.appendChild(resultElement);
   });
 }
 
@@ -91,8 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const quiz = await fetchQuizData(quizId);
       if (quiz) {
         console.log(`Fetched quiz data:`, quiz);  // Debug log
-        renderQuiz(quiz);
+        renderQuizStartButton(quiz);
       }
     });
   });
 });
+
+const init = async function() {
+
+  const quizId = parseInt( localStorage.getItem("quizeId") );
+  const quiz = await fetchQuizData( quizId );
+  renderQuiz(quiz);
+
+}
+
+init();

@@ -1,5 +1,4 @@
-
-
+const btnStart = document.querySelector("#btn-start-quiz");
 
 const renderQuiz = async function( ) {
 
@@ -34,5 +33,10 @@ const renderQuiz = async function( ) {
     }
     
 }
+
+btnStart.addEventListener('click',function(){
+    const url = window.location.origin+"/question.html";
+    location.assign(url);
+});
 
 renderQuiz();
