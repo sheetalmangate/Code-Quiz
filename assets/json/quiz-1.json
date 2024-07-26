@@ -1,5 +1,6 @@
 {
-    "quizname": "HTML Quiz",
+    "quizName": "HTML Quiz",
+    "quizDesc" : "This quiz is testing your knowlege on basic HTML tags.",
     "active": true,
     "questions": [
         {

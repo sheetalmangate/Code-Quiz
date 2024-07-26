@@ -1,5 +1,6 @@
 {
-"quizname": "CSS Quiz",
+    "quizName": "CSS Quiz",
+    "quizDesc" : "This quiz is testing your knowlege on basic CSS properties.",
     "active": true,
     "questions": [
         {
@@ -54,30 +55,6 @@
                 "class",
                 "element[class]"
             ]
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        } 
     ]
 }

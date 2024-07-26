@@ -4,7 +4,7 @@
 
 body {
 
-    font-family:"Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:  "Roboto", sans-serif;
     background-color: #eff5f8;
     color: #001b44;
     
@@ -21,13 +21,7 @@ body {
     rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     padding: 8px;
 }
-.card-question {
-
-    padding: 10px;
-    border-bottom: 1px solid gray;
-}
 
 li .dropdown-item {
     cursor: pointer;
 }
-
