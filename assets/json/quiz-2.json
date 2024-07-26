@@ -5,7 +5,7 @@
     "questions": [
         {
             "question": "In CSS, which property is used to change the text color of an element?",
-            "answer": 2,
+            "answer": 1,
             "options": [
                 "text-color",
                 "color",
@@ -15,7 +15,7 @@
         },
         {
             "question": "How do you include CSS in your HTML document?",
-            "answer": 2,
+            "answer": 1,
             "options":[
                 "<style src=styles.css>",
                 "<link rel=stylesheet href=styles.css>",
@@ -26,7 +26,7 @@
         },
         {
             "question": "Which CSS property is used to control the spacing between lines of text?",
-            "answer": 3,
+            "answer": 2,
             "options":[
                 "text-spacing",
                 "line-spacing",
@@ -37,7 +37,7 @@
         },
         {
             "question": "How can you make a text bold in CSS?",
-            "answer":3,
+            "answer":2,
             "options":[
                 "font-style: bold;",
                 "text-decoration: bold;",
@@ -48,7 +48,7 @@
         },
         {
             "question": "Which CSS selector is used to target elements with a specific class?",
-            "answer":2,
+            "answer":1,
             "options":[
                 "#class",
                 ".class",
