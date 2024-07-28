@@ -33,4 +33,19 @@ quizList.forEach((item) => {
 });
 
 
+//This function is use to render quiz when accessed from card
+document.addEventListener('DOMContentLoaded', function () {
+  const elements = document.querySelectorAll('.card[data-id], .dropdown-item[data-id]');
+  elements.forEach(element => {
+    element.addEventListener('click', function () {
+      const quizId = this.getAttribute('data-id');
+      // Update local storage with the selected quiz ID
+      localStorage.setItem('quizeId', quizId);
+      // Redirect to the quiz page based on the data-id
+      window.location.href = `quiz.html?id=${quizId}`;
+    });
+  });
+});
+
+
   
