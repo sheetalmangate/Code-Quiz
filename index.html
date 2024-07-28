@@ -53,34 +53,27 @@
         <div class="col">
           <div class="card" data-id="1">
             <div class="card-body">
-            <h1>HTML Quiz</h1>
-           
-            This quiz is testing your knowlege on basic HTML tags.
-
-            Total Questions : 5
+              <h1>HTML Quiz</h1>
+              This quiz is testing your knowlege on basic HTML tags.
+              Total Questions : 5
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card" data-id="2">
-            <div class="card-body">
-            <h1>CSS Quiz</h1>
-
-            
-            This quiz is testing your knowlege on basic CSS properties.
-            
-            Total Questions : 5
+            <div class="card-body" >
+              <h1>CSS Quiz</h1>
+              This quiz is testing your knowlege on basic CSS properties.
+              Total Questions : 5
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card" data-id="3">
             <div class="card-body">
-            <h1>JavaScript Quiz</h1>
-            
-            This quiz is testing basic of Javascript.
-
-            Total Questions : 4
+              <h1>JavaScript Quiz</h1>
+              This quiz is testing basic of Javascript.
+              Total Questions : 4
             </div>
           </div>
         </div>
@@ -88,24 +81,26 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous">
-  </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.card[data-id]');
-    cards.forEach(card => {
-      card.addEventListener('click', function() {
-        const quizId = this.getAttribute('data-id');
-        // Redirect to the quiz page based on the data-id
-        window.location.href = `quiz.html?id=${quizId}`;
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const elements = document.querySelectorAll('.card[data-id], .dropdown-item[data-id]');
+      elements.forEach(element => {
+        element.addEventListener('click', function () {
+          const quizId = this.getAttribute('data-id');
+          // Update local storage with the selected quiz ID
+          localStorage.setItem('quizeId', quizId);
+          // Redirect to the quiz page based on the data-id
+          window.location.href = `quiz.html?id=${quizId}`;
+        });
       });
     });
-  });
-</script>
-  
+    
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
