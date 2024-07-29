@@ -5,7 +5,7 @@
     "questions":[
         {
             "question": "How do you declare a variable in JavaScript?",
-            "answer": 2,
+            "answer": 1,
             "options":[
                 "variable x;",
                 "var x;",
@@ -15,7 +15,7 @@
         },
         {
             "question": "What is the correct way to write an IF statement in JavaScript?",
-            "answer":2,
+            "answer":1,
             "options":[
                 "if x == 5 then",
                 "if (x == 5)",
@@ -26,7 +26,7 @@
         },
         {
             "question": "How do you write a function in JavaScript?",
-            "answer": 3,
+            "answer": 2,
             "options": [
                 "function = myFunction() {}",
                 "function: myFunction() {}",
@@ -36,7 +36,7 @@
         },
         {
             "question": "What method is used to add an element to the end of an array in JavaScript?",
-            "answer":2,
+            "answer":1,
             "options":[
                 "pop",
                 "push",
