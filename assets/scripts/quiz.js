@@ -1,4 +1,5 @@
 const btnStart = document.querySelector("#btn-start-quiz");
+const btnStartModal = document.querySelector("#btn-start-quiz-modal");
 
 const renderQuiz = async function( ) {
 
@@ -30,14 +31,38 @@ const renderQuiz = async function( ) {
     
 }
 
+
 btnStart.addEventListener('click',function(){
-    const url = window.location.origin+"/question.html";
-    location.assign(url);
+    
+    // call the modal to enter username
+    var myModal = new bootstrap.Modal(document.getElementById('modal-username'));
+    document.querySelector("#username-error").classList.add('d-none');
+    myModal.show();
+
+
 });
+
+
+
+btnStartModal.addEventListener('click',function(){
+
+    const usernameError = document.querySelector("#username-error");
+    const username = document.querySelector("#username").value.trim();
+    
+    if( username === "" ) {
+
+        usernameError.textContent = 'Enter username to start quiz.';
+        usernameError.classList.remove('d-none');
+    } else {
+        //write username to local storage and redirect to questions
+        usernameError.classList.add('d-none');
+        localStorage.setItem("username",username);
+        const url = window.location.origin+"/question.html";
+        location.assign(url);
+    }
+
+});
+
 
 renderQuiz();
 
-const myModal = document.getElementById('modal-username')
-myModal.addEventListener('shown.bs.modal', () => {
-    myInput.focus()
-})

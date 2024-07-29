@@ -31,3 +31,7 @@ li .dropdown-item {
     cursor: pointer;
 }
 
+.error-msg {
+    padding: 2px;
+    color: red;
+}
