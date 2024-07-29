@@ -36,3 +36,8 @@ btnStart.addEventListener('click',function(){
 });
 
 renderQuiz();
+
+const myModal = document.getElementById('modal-username')
+myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+})
