@@ -20,7 +20,7 @@ function renderQuiz(quiz) {
   header.appendChild(myH1);*/
 
   const section = document.querySelector("section");
-  section.innerHTML = ""; // Clear previous content
+  section.innerHTML = "";
 
   renderQuizContent(section, quiz);
 }
@@ -73,10 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdownItems.forEach((item) => {
     item.addEventListener("click", async (event) => {
       const quizId = event.target.getAttribute("data-quiz");
-      console.log(`Selected quiz: ${quizId}`); // Debug log
+      console.log(`Selected quiz: ${quizId}`);
       const quiz = await fetchQuizData(quizId);
       if (quiz) {
-        console.log(`Fetched quiz data:`, quiz); // Debug log
+        console.log(`Fetched quiz data:`, quiz);
         renderQuizStartButton(quiz);
       }
     });
@@ -111,9 +111,9 @@ function checkAnswers(quiz) {
 
   forms.forEach((form, questionIndex) => {
     const selectedOption = form.querySelector('input[type="radio"]:checked');
-    let resultElement = form.querySelector('.result'); // Check if the result element already exists
+    let resultElement = form.querySelector('.result');
     if (!resultElement) {
-      resultElement = document.createElement('div'); // Create a new result element if it doesn't exist
+      resultElement = document.createElement('div');
       resultElement.className = 'result';
       form.appendChild(resultElement);
     }

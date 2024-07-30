@@ -1,8 +1,3 @@
-/*
-   This file contains common logic.
-*/
-
-//fetch JSON data 
 async function fetchQuizData(quizId) {
     
   const requestURL = `./assets/json/quiz-${quizId}.json`;
@@ -19,7 +14,6 @@ async function fetchQuizData(quizId) {
   }
 }
 
-//This function is use to render quiz when accessed from drop down menu
 const quizList = document.querySelectorAll("#quiz-list > li > span");
 const url = window.location.origin+"/quiz.html";
 
@@ -33,7 +27,6 @@ quizList.forEach((item) => {
 });
 
 
-//This function is use to render quiz when accessed from card
 document.addEventListener('DOMContentLoaded', function () {
 const elements = document.querySelectorAll('.card[data-id], .dropdown-item[data-id]');
 elements.forEach(element => {
