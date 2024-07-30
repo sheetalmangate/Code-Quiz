@@ -25,3 +25,8 @@ body {
 li .dropdown-item {
     cursor: pointer;
 }
+
+.error-msg {
+    padding: 2px 4px;
+    color: red;
+}
