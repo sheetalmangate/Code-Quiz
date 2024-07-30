@@ -34,7 +34,6 @@ const renderQuiz = async function( ) {
 
 btnStart.addEventListener('click',function(){
     
-    // call the modal to enter username
     var myModal = new bootstrap.Modal(document.getElementById('modal-username'));
     document.querySelector("#username-error").classList.add('d-none');
     myModal.show();
@@ -54,7 +53,6 @@ btnStartModal.addEventListener('click',function(){
         usernameError.textContent = 'Enter username to start quiz.';
         usernameError.classList.remove('d-none');
     } else {
-        //write username to local storage and redirect to questions
         usernameError.classList.add('d-none');
         localStorage.setItem("username",username);
         const url = window.location.origin+"/question.html";
