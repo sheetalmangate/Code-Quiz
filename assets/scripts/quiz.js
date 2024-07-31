@@ -55,7 +55,16 @@ btnStartModal.addEventListener('click',function(){
     } else {
         usernameError.classList.add('d-none');
         localStorage.setItem("username",username);
-        const url = window.location.origin+"/question.html";
+        
+        let url = '';
+        if( window.location.pathname === '/Code-Quiz/' ) {
+
+            url = window.location.hostname+window.location.pathname+"question.html";
+        } else {
+        
+            url = window.location.origin+"/question.html";
+        }
+        
         location.assign(url);
     }
 
