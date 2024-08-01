@@ -57,14 +57,15 @@ btnStartModal.addEventListener('click',function(){
         localStorage.setItem("username",username);
         
         let url = '';
-        if( window.location.pathname === '/Code-Quiz/' ) {
 
-            url = window.location.hostname+window.location.pathname+"question.html";
+        if( window.location.href.includes('/Code-Quiz/') ) {
+            
+            url = window.location.hostname+"/Code-Quiz/question.html";
+
         } else {
-        
+            
             url = window.location.origin+"/question.html";
         }
-        
         location.assign(url);
     }
 
