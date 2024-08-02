@@ -31,22 +31,25 @@ btnStart.addEventListener("click", function () {
   myModal.show();
 });
 
-btnStartModal.addEventListener("click", function () {
-  const usernameError = document.querySelector("#username-error");
-  const username = document.querySelector("#username").value.trim();
+btnStartModal.addEventListener('click', function () {
+    const usernameError = document.querySelector("#username-error");
+    const username = document.querySelector("#username").value.trim();
 
-  if (username === "") {
-    usernameError.textContent = "Enter username to start quiz.";
-    usernameError.classList.remove("d-none");
-  } else {
-    usernameError.classList.add("d-none");
-    localStorage.setItem("username", username);
+    if (username === "") {
+        usernameError.textContent = 'Enter username to start quiz.';
+        usernameError.classList.remove('d-none');
+    } else {
+        usernameError.classList.add('d-none');
+        localStorage.setItem("username", username);
 
-    let url = '../question.html';
+        let url = 'question.html';
+        if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
+            url = './question.html';
+        }
 
-    console.log(`Navigating to URL: ${url}`);
-    location.assign(url);
-}
+        console.log(`Navigating to URL: ${url}`);
+        location.assign(url);
+    }
 });
 
 renderQuiz();
