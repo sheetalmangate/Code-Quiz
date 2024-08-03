@@ -46,5 +46,3 @@ elements.forEach(element => {
   });
 });
 });
-
-

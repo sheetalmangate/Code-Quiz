@@ -24,12 +24,21 @@ function renderQuiz(quiz) {
 
   renderQuizContent(section, quiz);
 }
-
 function renderQuizContent(section, quiz) {
   quiz.questions.forEach((question, questionIndex) => {
-    const h2Element = document.createElement("h2");
-    h2Element.textContent = question.question;
-    section.appendChild(h2Element);
+    // Create card container
+    const cardElement = document.createElement("div");
+    cardElement.className = "card mb-3";
+
+    // Create card header for the question
+    const cardHeader = document.createElement("div");
+    cardHeader.className = "card-header";
+    cardHeader.textContent = question.question;
+    cardElement.appendChild(cardHeader);
+
+    // Create card body for the options
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body";
 
     const formElement = document.createElement("form");
     formElement.className = "quiz-form";
@@ -55,7 +64,11 @@ function renderQuizContent(section, quiz) {
       formElement.appendChild(divElement);
     });
 
-    section.appendChild(formElement);
+    cardBody.appendChild(formElement);
+    cardElement.appendChild(cardBody);
+
+    // Append the card to the section
+    section.appendChild(cardElement);
   });
 
   const submitButton = document.createElement("button");
