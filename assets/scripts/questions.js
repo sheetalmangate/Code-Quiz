@@ -117,7 +117,19 @@ init();
 //   }
 // }
 function checkAnswers(quiz) {
-  let username = prompt("Enter your username:");
+  let username;
+
+  if (typeof(Storage) !== "undefined") {
+    username = localStorage.getItem('username');
+    if (!username) {
+      username = prompt("Enter your username:");
+      localStorage.setItem('username', username);
+    }
+  } else {
+    console.error("localStorage is not available.");
+    username = prompt("Enter your username:");
+  }
+
   const forms = document.querySelectorAll('.quiz-form');
   let correctAnswers = 0;
   let totalQuestions = 0;
