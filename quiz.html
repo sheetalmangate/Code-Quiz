@@ -15,6 +15,7 @@
 
     <script defer src="./assets/scripts/logic.js"></script>
     <script defer src="./assets/scripts/quiz.js"></script>
+    <script defer src="./assets/scripts/questions.js"></script>
 
 </head>
 <body>
@@ -49,34 +50,34 @@
       </nav>
     </header>
     <main>
-        <div id="quiz-info" class="card">
-          <h3 id="quiz-name"></h3>
-          <p id="quiz-desc"></p>
-          <p >Total Questions : <span id="quiz-ques"></span></p>
-          <button id="btn-start-quiz" class="btn btn-primary"> Start >> </button>
-        </div>        
-        <div id="quiz-error" class="card d-none">
-            Please select quiz from dropdown.
-        </div>
-
-        <div id="modal-username" class="modal" tabindex="-1">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Please Enter Username</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <input type="text" name="username" id="username">
-                <p id="username-error" class="d-none error-msg"></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button  id="btn-start-quiz-modal" type="button" class="btn btn-primary">Start Quiz</button>
-              </div>
+      <div id="quiz-info" class="card">
+        <h3 id="quiz-name"></h3>
+        <p id="quiz-desc"></p>
+        <p>Total Questions: <span id="quiz-ques"></span></p>
+        <button id="btn-start-quiz" class="btn btn-primary">Start >></button>
+      </div>
+      <div id="quiz-error" class="card d-none">
+        Please select quiz from dropdown.
+      </div>
+  
+      <div id="modal-username" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Please Enter Username</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input type="text" name="username" id="username"  placeholder="username">
+              <p id="username-error" class="d-none error-msg"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="btn-start-quiz-modal" type="button" class="btn btn-primary">Start Quiz</button>
             </div>
           </div>
         </div>
+      </div>
     </main>
     <footer>
 

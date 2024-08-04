@@ -46,3 +46,30 @@ elements.forEach(element => {
   });
 });
 });
+
+
+function checkAnswers(quiz) {
+  const username = prompt("Enter your username:");
+  let score = 0;
+
+  quiz.questions.forEach((question, questionIndex) => {
+    const selectedOption = document.querySelector(`input[name="question-${questionIndex}"]:checked`);
+    if (selectedOption && parseInt(selectedOption.value) === question.correctOption) {
+      score++;
+    }
+  });
+
+  const result = {
+    username: username,
+    score: score,
+    total: quiz.questions.length
+  };
+
+  saveResult(result);
+}
+
+function saveResult(result) {
+  let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+  leaderboard.push(result);
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+}

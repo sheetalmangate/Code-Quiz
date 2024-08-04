@@ -103,21 +103,21 @@ const init = async function () {
 };
 
 init();
-function saveQuizResult(quizName, correctAnswers, totalQuestions) {
-  if (typeof localStorage !== "undefined") {
-    const quizResult = {
-      quizName: quizName,
-      correctAnswers: correctAnswers,
-      totalQuestions: totalQuestions,
-    };
+// function saveQuizResult(quizName, correctAnswers, totalQuestions) {
+//   if (typeof localStorage !== "undefined") {
+//     const quizResult = {
+//       quizName: quizName,
+//       correctAnswers: correctAnswers,
+//       totalQuestions: totalQuestions,
+//     };
 
-    localStorage.setItem("quizResult", JSON.stringify(quizResult));
-  } else {
-    console.error("localStorage is not available.");
-  }
-}
-
+//     localStorage.setItem("quizResult", JSON.stringify(quizResult));
+//   } else {
+//     console.error("localStorage is not available.");
+//   }
+// }
 function checkAnswers(quiz) {
+  let username = prompt("Enter your username:");
   const forms = document.querySelectorAll('.quiz-form');
   let correctAnswers = 0;
   let totalQuestions = 0;
@@ -148,5 +148,29 @@ function checkAnswers(quiz) {
     }
   });
 
-  saveQuizResult(quiz.quizName, correctAnswers, totalQuestions);
+  saveQuizResult(username, quiz.quizName, correctAnswers, totalQuestions);
+}
+
+// Function to save quiz results to localStorage
+function saveQuizResult(username, quizType, score, totalQuestions) {
+  const quizResults = JSON.parse(localStorage.getItem('quizResults')) || [];
+  const newResult = {
+    username: username,
+    quizType: quizType,
+    score: score,
+    totalQuestions: totalQuestions
+  };
+  quizResults.push(newResult);
+  localStorage.setItem('quizResults', JSON.stringify(quizResults));
+}
+function handleQuizSubmission() {
+  const username = document.getElementById('username').value; // Replace with actual username input
+  const quizType = quiz.quizName; // Assuming quiz.quizName contains the type of quiz
+  const score = correctAnswers; // Use the actual score calculation
+  const totalQuestions = quiz.questions.length; // Use the actual total questions
+  console.log({ quizType, username, score, totalQuestions });
+  saveQuizResult(quizType, username, score, totalQuestions);
+
+  // Redirect to leaderboard page
+  window.location.href = 'leaderboard.html';
 }
