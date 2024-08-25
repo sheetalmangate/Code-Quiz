@@ -56,7 +56,7 @@ btnStartModal.addEventListener('click',function(){
     } else {
         //write username to local storage and redirect to questions
         usernameError.classList.add('d-none');
-        localStorage.setItem("username",username);
+        localStorage.setItem("username", username);
         const url = window.location.origin+"/question.html";
         location.assign(url);
     }

@@ -74,6 +74,7 @@ function renderQuizContent(section, quiz) {
   const submitButton = document.createElement("button");
   submitButton.textContent = "Submit";
   submitButton.className = "btn btn-primary mt-3";
+  submitButton.id = "submitQuiz";
   submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     checkAnswers(quiz);
@@ -186,3 +187,4 @@ function handleQuizSubmission() {
   // Redirect to leaderboard page
   window.location.href = 'leaderboard.html';
 }
+document.getElementById('submitQuiz').addEventListener('click', handleQuizSubmission);
